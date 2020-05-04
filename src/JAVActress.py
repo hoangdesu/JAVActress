@@ -1,3 +1,5 @@
+# A mini project by Hoang Nguyen (hoangdesu@gmail.com)
+
 import requests
 
 def LookupActress():
