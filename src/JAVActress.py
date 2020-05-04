@@ -17,7 +17,7 @@ def LookupActress():
         actress_id = actressRequest['result'][i]['id']
         actress_name = actressRequest['result'][i]['name']
         actress_japName = actressRequest['result'][i]['japanName']
-        print("{:<3} | {:<7} | {:17} | {}\t".format(i+1, actress_id, actress_name, actress_japName))
+        print("{:>3} | {:<7} | {:17} | {}\t".format(i+1, actress_id, actress_name, actress_japName))
     print('Found {} babes named "{}"'.format(counts, actressName))
     print()
 
@@ -40,10 +40,10 @@ def LookUpMovies():
             video_title = videoRequest['result'][i]['name']
         
         siteUrl = videoRequest['result'][i]['siteUrl']
-        video_code = siteUrl[(siteUrl.find("cid=") + 4):(len(siteUrl) - 1)].upper()
+        video_code = siteUrl[(siteUrl.find("cid=") + 4):(len(siteUrl) - 1)].replace('00', '-', 1).upper()
         year = videoRequest['result'][i]['date'][:4]
 
-        message = "{:<3} | {} | {}\t| {:<15} | {}".format(i+1, year, actress_name, video_code, video_title)
+        message = "{:>3} | {} | {}\t| {:<15} | {}".format(i+1, year, actress_name, video_code, video_title)
         print(message)
     print("Found {} videos for {}".format(video_counts, actress_name))
     print()
