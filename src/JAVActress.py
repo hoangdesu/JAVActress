@@ -1,7 +1,6 @@
 import requests
 
 def LookupActress():
-    #Thanks anh Hoàng toidicodedao for the Jav API :v
     url = 'https://jav-rest-api-htpvmrzjet.now.sh/api/actress?name='
     actressName = input("Search for an actress: ")
     actressURL = url + actressName
@@ -65,6 +64,7 @@ def SuggestAMovie():
 if __name__ == "__main__":
     programLoop()
 
+    #Thanks anh Hoàng toidicodedao for the Jav API :v
 
 # if len(actress_name) > 11:
         #     print("{}\t | {} \t| {}\t".format(actress_id, actress_name, actress_japName))
