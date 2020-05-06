@@ -40,7 +40,7 @@ def LookUpMovies():
             vidURL = video_url + actress_id + "?hits=99&offset=" + str(_loop*99)
         else:
             vidURL = video_url + actress_id + "?hits=99"
-        print(vidURL)
+        #print(vidURL)
         videoRequest = requests.get(vidURL).json()
         video_counts = len(videoRequest['result'])
 
